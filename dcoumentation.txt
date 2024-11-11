@@ -1,0 +1,9 @@
+Sometimes Working on a long project can get very boring
+right, so some times I swithc to look
+for an exciting question online and do a dive into it 
+Just a fun way of exploring curiosity
+
+RepoName - AI-CURIOUS-DIVES
+
+python3 -m venv explore-venv
+source explore-venv/bin/activate
