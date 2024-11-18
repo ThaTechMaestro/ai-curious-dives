@@ -1,6 +1,7 @@
 from typing import Dict, TypedDict, Optional
 from langgraph.graph import StateGraph, END
 
+'Still refactoring this'
 class GraphState(TypedDict):
     question: Optional[str] = None
     classification: Optional[str] = None
@@ -8,7 +9,7 @@ class GraphState(TypedDict):
 
 def classify_input_node(state):
     question = state.get('question', '').strip()
-    classification = classify(question)  # Assume a function that classifies the input
+    classification = classify(question) 
     return {"classification": classification}
 
 def handle_greeting_node(state):
@@ -18,8 +19,6 @@ def handle_search_node(state):
     question = state.get('question', '').strip()
     search_result = f"Search result for '{question}'"
     return {"response": search_result}
-
-
 
 workflow = StateGraph(GraphState)
 
